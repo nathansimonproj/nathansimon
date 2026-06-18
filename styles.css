@@ -135,6 +135,43 @@ h1 {
     margin-bottom: 10px;
 }
 
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #16a34a;
+    background: #dcfce7;
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin-bottom: 16px;
+}
+
+.status-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #16a34a;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+html.dark .status-badge {
+    color: #4ade80;
+    background: #052e16;
+}
+
+html.dark .status-badge::before {
+    background: #4ade80;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
 .tagline {
     font-size: 18px;
     color: var(--text-muted);
@@ -171,6 +208,18 @@ html.dark .social-links img {
 
 .social-links img:hover {
     opacity: 1;
+}
+
+.email-link {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.email-link:hover {
+    color: var(--text);
+    text-decoration: none;
 }
 
 /* Section headings */
@@ -258,6 +307,16 @@ html.dark .card:hover {
 
 html.dark .card-logo {
     filter: invert(1);
+}
+
+.card-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    flex: 0;
 }
 
 .card p {

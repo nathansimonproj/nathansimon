@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Migrator — Nathan Simon</title>
+    <link rel="icon" href="attachments/nathanSimonFavicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-name" style="text-decoration:none;">Nathan Simon</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero fade-in">
+            <p class="card-label" style="margin-bottom:12px;">Personal Project &middot; Sep – Nov 2025</p>
+            <h1>Playlist Migrator</h1>
+            <p class="tagline" style="margin-bottom:24px;">Migrates playlists from YouTube Music to Spotify with 95% track accuracy and sub-120ms latency.</p>
+            <a href="https://github.com/nathansimonproj/yt-music-to-spotify" target="_blank" class="btn btn-outline">View on GitHub</a>
+        </section>
+
+        <section class="fade-in">
+            <h2>Overview</h2>
+            <p>All my friends shared playlists on Spotify, but my library was on YouTube Music. Existing migration tools were either broken, required manual CSV exports, or silently dropped tracks. So I built one that actually works.</p>
+            <p>The app authenticates with both platforms via OAuth, reads your YouTube Music playlists, and recreates them in Spotify — including playlists with 200+ tracks using batch processing to stay within API rate limits.</p>
+        </section>
+
+        <section class="fade-in">
+            <h2>How it worked</h2>
+            <p>The core challenge was matching tracks across two platforms with different metadata schemas. A song on YouTube Music might be "Artist - Song Title (Official Video)" while Spotify stores it as a structured artist/album/track object. I built an automatic querying system that tries multiple search strategies — exact title, then artist + title, then fuzzy album/artist matching — until it finds a confident match or flags it for review.</p>
+            <p>The Flask backend handled OAuth flows for both Google and Spotify APIs, and the whole thing ran on GCP. Batch processing chunked large playlists into parallel requests to keep response times low.</p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Impact</h2>
+            <div class="project-grid" style="grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));">
+                <div class="card" style="cursor:default;">
+                    <h3 style="font-size:28px; font-weight:600; margin-bottom:4px;">95%</h3>
+                    <p style="margin:0;">track match accuracy</p>
+                </div>
+                <div class="card" style="cursor:default;">
+                    <h3 style="font-size:28px; font-weight:600; margin-bottom:4px;">&lt;120ms</h3>
+                    <p style="margin:0;">API latency</p>
+                </div>
+                <div class="card" style="cursor:default;">
+                    <h3 style="font-size:28px; font-weight:600; margin-bottom:4px;">200+</h3>
+                    <p style="margin:0;">tracks handled per playlist via batch processing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <h2>Stack</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Flask</span>
+                <span class="skill">HTML/CSS</span>
+                <span class="skill">GCP</span>
+                <span class="skill">Spotify API</span>
+                <span class="skill">Google API</span>
+                <span class="skill">OAuth</span>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <a href="index.html#projects" class="btn btn-outline" style="display:inline-block;">&larr; Back to projects</a>
+        </section>
+    </main>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        if (localStorage.getItem('dark') === 'true') document.documentElement.classList.add('dark');
+        toggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('dark', document.documentElement.classList.contains('dark'));
+        });
+        const observer = new IntersectionObserver(
+            entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+            { threshold: 0.05 }
+        );
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
