@@ -5,40 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Simon</title>
     <link rel="icon" href="attachments/nathanSimonFavicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
-
 </head>
 <body>
+    <header>
+        <nav>
+            <span class="nav-name">Nathan Simon</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <main>
-        <h1>Nathan Simon</h1>
+        <section class="hero fade-in">
+            <h1>Nathan Simon</h1>
+            <p class="tagline"><span id="typed"></span><span class="cursor">|</span></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nathanael-simon72" target="_blank">
+                    <img src="/attachments/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:nsimon06@uw.edu" target="_blank">
+                    <img src="/attachments/gmailIcon.png" alt="Email">
+                </a>
+                <a href="https://github.com/nathansimonproj" target="_blank">
+                    <img src="/attachments/GitHub3.png" alt="GitHub">
+                </a>
+            </div>
+        </section>
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/nathanael-simon72" target="_blank">
-                <img src="/attachments/LinkedIn_logo_initials.png" alt="LinkedIn">
-            </a>
-            <a href="mailto:nsimon06@uw.edu" target="_blank">
-                <img src="/attachments/gmailIcon.png" alt="Email">
-            </a>
-            <a href="https://github.com/nathansimonproj" target="_blank">
-                <img src="/attachments/GitHub3.png" alt="GitHub">
-            </a>
-        </div>
+        <section id="about" class="fade-in">
+            <h2>About</h2>
+            <p>I love playing soccer, lifting weights, and experimenting in the kitchen. I've also always been drawn to solving problems, whether that be on the field or through a screen. My interest in tech started later in sophomore year of high school, with my very first Intro to Python class.</p>
+            <p>At the University of Washington, I study Computer Science, where I've learned how impactful efficient software can be. This summer, I interned at <a href="goDaddy.html"><b>GoDaddy</b></a>, working with the Reporting and Security teams — shipping production-ready code and taking ownership across many areas.</p>
+            <p>I'm currently exploring iOS development with Swift and building web apps with React.</p>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Swift</span>
+                <span class="skill">React</span>
+                <span class="skill">LLMs</span>
+                <span class="skill">OAuth</span>
+                <span class="skill">YARA</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill">Git</span>
+            </div>
+        </section>
 
-        <p>I love playing soccer, lifting weights, and experimenting in the kitchen. I've also always been drawn to solving problems, whether that be on the field or through a screen. My interest in tech started later in sophomore year of high school, with my very first Intro to Python class.</p>
-        
-        <p>At the University of Washington, I decided to study Computer science, where I've learned how impactful efficient software can be. This summer, I interned at <b><a href="goDaddy.html" target="_self">GoDaddy</a></b>, where I worked with the SRE and Security team. GoDaddy gave me the incredible oppurtunity to learn to work fast, ship production-ready code, and take ownership across many areas.</p>
-        
-        <p>Recently, I've worked on two projects. This summer I built a YARA transpiler for GoDaddy that used LLMs and a custom reasoning process to convert messy, unstructured malware signatures into normalized YARA rules. I learned a lot about cybersecurity, prompt chaining, and how to design scalable AI-driven systems that can adapt to new data formats.</p>
-        
-        <p>On my own time, I built a <a href="https://github.com/nathansimonproj/yt-music-to-spotify" target="_blank"><b>Playlist Migrator</b></a> from YouTube Music to Spotify so I could join all my friends shared playlists on Spotify. What started as a small side project taught me a lot about API design, secure OAuth flows, and the enjoyability of building small tools that make everyday life a little smoother.</p>
-        
-        <p>I'm currently exploring iOS development using Swift and building webpages using React.</p>
-        
-        <p>Feel free to <b><a href="mailto:nsimon06@uw.edu">email</a></b> me or check out my <b><a href="/attachments/NathanSimonResume.pdf" target="_blank">resume</a></b>.</p>
+        <section id="projects" class="fade-in">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <a href="goDaddy.html" class="card">
+                    <!-- <div class="card-header">
+                        <img src="/attachments/GoDaddy.png" alt="GoDaddy" class="card-logo">
+                    </div> -->
+                    <h3>YARA Transpiler</h3>
+                    <p>LLM-powered pipeline that converts messy malware signatures into normalized YARA rules using custom prompt chaining.</p>
+                    <div class="card-tags">
+                        <span>Python</span><span>LLMs</span><span>YARA</span>
+                    </div>
+                </a>
+                <a href="goDaddy.html" class="card">
+                    <!-- <div class="card-header">
+                        <img src="/attachments/GoDaddy.png" alt="GoDaddy" class="card-logo">
+                    </div> -->
+                    <h3>Ops Review Automation</h3>
+                    <p>SRE metrics pipeline that automated the ops review process, cutting manual work and improving reliability tracking.</p>
+                    <div class="card-tags">
+                        <span>Python</span><span>SRE</span><span>Automation</span>
+                    </div>
+                </a>
+                <a href="https://github.com/nathansimonproj/yt-music-to-spotify" target="_blank" class="card">
+                    <h3>Playlist Migrator</h3>
+                    <p>Migrates playlists from YouTube Music to Spotify. Built with OAuth flows and both platforms' APIs.</p>
+                    <div class="card-tags">
+                        <span>Python</span><span>OAuth</span><span>APIs</span>
+                    </div>
+                </a>
+            </div>
+        </section>
 
+        <section id="contact" class="fade-in">
+            <h2>Contact</h2>
+            <p>I'm always happy to chat — feel free to reach out.</p>
+            <div class="contact-links">
+                <a href="mailto:nsimon06@uw.edu" class="btn">Email me</a>
+                <a href="/attachments/NathanSimonResume.pdf" target="_blank" class="btn btn-outline">Resume</a>
+            </div>
+        </section>
     </main>
 
+    <script>
+        // Dark mode
+        const toggle = document.getElementById('darkToggle');
+        if (localStorage.getItem('dark') === 'true') document.documentElement.classList.add('dark');
+        toggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('dark', document.documentElement.classList.contains('dark'));
+        });
+
+        // Typed text
+        const words = ['Current @ BMW Tech Group', 'Computer Science @ UW', 'Prev @ GoDaddy'];
+        const typedEl = document.getElementById('typed');
+        let wi = 0, ci = 0, deleting = false;
+        function type() {
+            const word = words[wi];
+            typedEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+            if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1400); return; }
+            if (deleting && ci < 0) { deleting = false; wi = (wi + 1) % words.length; ci = 0; }
+            setTimeout(type, deleting ? 45 : 75);
+        }
+        type();
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver(
+            entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+            { threshold: 0.05 }
+        );
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
