@@ -15,7 +15,7 @@ function groupByCompany(list) {
 export default function Projects() {
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = 'Projects — Nathan Simon'
+    document.title = 'projects — nathan simon'
   }, [])
 
   const groups = groupByCompany(projects)

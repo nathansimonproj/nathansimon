@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 export default function GoDaddy() {
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = 'GoDaddy — Nathan Simon'
-    return () => { document.title = 'Nathan Simon' }
+    document.title = 'godaddy — nathan simon'
+    return () => { document.title = 'nathan simon' }
   }, [])
 
   return (

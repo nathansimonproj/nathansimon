@@ -1,25 +1,26 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const skills = ['Python', 'Swift', 'React', 'LLMs', 'OAuth', 'YARA', 'REST APIs', 'Git']
+const skills = ['Python', 'Node.js', 'React', 'PostgreSQL', 'Swift', 'LLMs', 'OAuth', 'REST APIs', 'Git']
 
 export default function About() {
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = 'About — Nathan Simon'
+    document.title = 'about — nathan simon'
   }, [])
 
   return (
     <main>
       <section className="article-header">
-        <h1>About</h1>
-        <p className="tagline">A little bit about who I am and what I'm working on.</p>
+        <h1>software for sleep and nutrition</h1>
+        {/* <p className="tagline">Building software at the intersection of sleep and nutrition.</p> */}
       </section>
 
       <section>
-        <p>I love playing soccer, lifting weights, and experimenting in the kitchen. I've also always been drawn to solving problems, whether that be on the field or through a screen. My interest in tech started later in sophomore year of high school, with my very first Intro to Python class.</p>
-        <p>At the University of Washington, I study Computer Science, where I've learned how impactful efficient software can be. Last summer, I interned at <Link to="/godaddy">GoDaddy</Link>, working with the Reporting and Security teams — shipping production-ready code and taking ownership across many areas.</p>
-        <p>I'm currently exploring iOS development with Swift and building web apps with React.</p>
+        <p>I'm interested in the systems layer of health — specifically sleep and nutrition. Most of what determines how well someone sleeps or eats happens invisibly: caffeine lingering in the bloodstream for hours, a decision made in the afternoon catching up at 2am. I build software that surfaces that invisible layer, so people can see it and act on it instead of guessing.</p>
+        <p>At the University of Washington, I study Computer Science and Nutrition together, specifically to work at that intersection — the biology of what's actually happening in the body, paired with the software systems that can track, model, and explain it in real time.</p>
+        <p>Last summer I interned at <Link to="/godaddy">GoDaddy</Link> on the Reporting and Security teams, where I learned what it takes to ship production software responsibly — experience I now bring to building health tools people can actually rely on, not just prototypes.</p>
+        <p>Right now I'm building <Link to="/projects/drift">Drift</Link>, which models how caffeine and other substances decay in the body over time and forecasts how that will affect sleep that night. It's the first piece of a broader interest in sleep and nutrition tech: software that turns biology into something legible and actionable.</p>
       </section>
 
       <section>

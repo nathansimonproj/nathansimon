@@ -4,7 +4,7 @@ import SocialLinks from '../components/SocialLinks'
 export default function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = 'Contact — Nathan Simon'
+    document.title = 'contact — nathan simon'
   }, [])
 
   return (

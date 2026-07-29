@@ -8,8 +8,8 @@ export default function ProjectPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = project ? `${project.title} — Nathan Simon` : 'Nathan Simon'
-    return () => { document.title = 'Nathan Simon' }
+    document.title = project ? `${project.title.toLowerCase()} — nathan simon` : 'nathan simon'
+    return () => { document.title = 'nathan simon' }
   }, [project])
 
   if (!project) {

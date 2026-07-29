@@ -12,7 +12,7 @@ const featured = featuredSlugs
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = 'Nathan Simon'
+    document.title = 'nathan simon'
   }, [])
 
   return (
