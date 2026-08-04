@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import ProjectPage from './pages/ProjectPage'
 import GoDaddy from './pages/GoDaddy'
+import BMW from './pages/BMW'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/godaddy" element={<GoDaddy />} />
+        <Route path="/bmw" element={<BMW />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

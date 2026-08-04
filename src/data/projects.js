@@ -11,7 +11,7 @@ export const projects = [
       'Helps college students see how caffeine and substance use is affecting their sleep, with a decay timeline and nightly forecast.',
     tagline:
       'A sleep app for college students that visualizes how caffeine and substance use decay over time and affect their sleep.',
-    cardTags: ['JavaScript', 'Node.js', 'PostgreSQL', 'Chart.js'],
+    cardTags: ['JavaScript', 'Node.js', 'PostgreSQL'],
     live: 'https://drift-hs0w.onrender.com/',
     logo: '/attachments/drift-logo.png',
     sections: [
@@ -30,7 +30,7 @@ export const projects = [
       },
     ],
     stats: [],
-    stack: ['JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'Chart.js', 'Render'],
+    stack: ['JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'Render'],
   },
   {
     slug: 'yara-transpiler',
