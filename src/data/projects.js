@@ -5,7 +5,7 @@ export const projects = [
     cardLabel: 'Personal Project',
     category: 'personal',
     company: 'Personal',
-    date: '2026',
+    date: 'current',
     title: 'Drift',
     blurb:
       'Helps college students see how caffeine and substance use is affecting their sleep, with a decay timeline and nightly forecast.',
