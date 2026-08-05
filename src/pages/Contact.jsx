@@ -17,7 +17,7 @@ export default function Contact() {
       <section>
         <div className="contact-links">
           <a href="mailto:nsimon06@uw.edu" className="btn">Email me</a>
-          <a href="/attachments/NathanSimonResume.pdf" target="_blank" rel="noreferrer" className="btn btn-outline">Resume</a>
+          <a href="/attachments/nathanSimonResume.pdf" target="_blank" rel="noreferrer" className="btn btn-outline">Resume</a>
         </div>
         <SocialLinks />
       </section>
