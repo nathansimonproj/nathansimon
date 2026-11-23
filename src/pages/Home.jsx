@@ -22,7 +22,7 @@ export default function Home() {
         <div className="cover-overlay">
           <div className="cover-inner">
             <h1>Nathan Simon</h1>
-            <p className="status-line"><span className="dot" />Currently @ BMW Tech</p>
+            <p className="status-line"><span className="dot" />Currently building <Link to="/projects/spots" className="cover-link">spots</Link></p>
           </div>
         </div>
       </div>

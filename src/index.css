@@ -193,6 +193,20 @@ p strong, p b {
     margin-bottom: 0;
 }
 
+.cover-overlay .cover-link {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s;
+}
+
+.cover-overlay .cover-link:hover {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
 /* Hero */
 .hero {
     padding: 0 0 8px;
