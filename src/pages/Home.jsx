@@ -4,7 +4,7 @@ import SocialLinks from '../components/SocialLinks'
 import ProjectEntry from '../components/ProjectCard'
 import { projects } from '../data/projects'
 
-const featuredSlugs = ['drift', 'playlist-migrator']
+const featuredSlugs = ['spots', 'drift']
 const featured = featuredSlugs
   .map(slug => projects.find(p => p.slug === slug))
   .filter(Boolean)
