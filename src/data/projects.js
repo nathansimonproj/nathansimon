@@ -91,7 +91,7 @@ export const projects = [
     statsHeading: 'By the numbers',
     stats: [
       { value: '~4,200', label: 'lines of Swift in the app and extension' },
-      { value: '96', label: 'unit tests on the decision logic' },
+      { value: '150+', label: 'unit tests on the decision logic' },
       { value: '6', label: 'scripted geofence scenarios, all passing in the Simulator' },
     ],
     stack: ['Swift', 'SwiftUI', 'Core Location', 'MapKit', 'Screen Time API', 'Supabase'],
